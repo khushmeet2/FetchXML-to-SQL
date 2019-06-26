@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AccessControl="http://www.sap.com/ndb/SQLCoreModelAccessControl.ecore" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="ZCA_ContractsAndSalesOrders" applyPrivilegeType="ANALYTIC_PRIVILEGE" checkAnalyticPrivileges="true" defaultClient="crossClient" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" translationRelevant="true" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" dataCategory="CUBE" enforceSqlExecution="true" executionSemantic="UNDEFINED" outputViewType="Aggregation">
+  <origin/>
+  <descriptions defaultDescription=" ZCA_ContractsAndSalesOrders              "/>
+  <defaultSchema schemaName="SAP_ECC"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="67"/>
+  <dataSources>
+    <DataSource id="ZCA_VBAP_VBKD_VEDA" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.OTC/calculationviews/ZCA_VBAP_VBKD_VEDA</resourceUri>
+    </DataSource>
+    <DataSource id="VBAK" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="VBAK"/>
+    </DataSource>
+    <DataSource id="ZCA_ProfitCenter" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.MasterData/calculationviews/ZCA_ProfitCenter</resourceUri>
+    </DataSource>
+    <DataSource id="JEST" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="JEST"/>
+    </DataSource>
+    <DataSource id="TVKGT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVKGT"/>
+    </DataSource>
+    <DataSource id="T179T" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="SAP_ECC" columnObjectName="T179T"/>
+    </DataSource>
+    <DataSource id="Join_4$$$$T179T$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="SAP_ECC" columnObjectName="T179T"/>
+    </DataSource>
+    <DataSource id="Join_5$$$$T179T$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="SAP_ECC" columnObjectName="T179T"/>
+    </DataSource>
+    <DataSource id="Join_6$$$$T179T$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="SAP_ECC" columnObjectName="T179T"/>
+    </DataSource>
+    <DataSource id="Projection_5$$$$VBAK$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="VBAK"/>
+    </DataSource>
+    <DataSource id="JCDS" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="JCDS"/>
+    </DataSource>
+    <DataSource id="TVAK" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVAK"/>
+    </DataSource>
+    <DataSource id="TJ30T" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TJ30T"/>
+    </DataSource>
+    <DataSource id="TVFST" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVFST"/>
+    </DataSource>
+    <DataSource id="VBEP" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="VBEP"/>
+    </DataSource>
+    <DataSource id="VBEP_MAX_ETENR$$$$VBEP$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="VBEP"/>
+    </DataSource>
+    <DataSource id="ZCA_KONV_COM" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.OTC/calculationviews/ZCA_KONV_COM</resourceUri>
+    </DataSource>
+    <DataSource id="TVAGT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVAGT"/>
+    </DataSource>
+    <DataSource id="TVAPT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVAPT"/>
+    </DataSource>
+    <DataSource id="TVLVT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVLVT"/>
+    </DataSource>
+    <DataSource id="T001W" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="T001W"/>
+    </DataSource>
+    <DataSource id="SER02" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="SER02"/>
+    </DataSource>
+    <DataSource id="FPLA" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="FPLA"/>
+    </DataSource>
+    <DataSource id="OBJK" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="OBJK"/>
+    </DataSource>
+    <DataSource id="ZCA_OBJK_CountEquip_SalesOrder" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.OTC/calculationviews/ZCA_OBJK_CountEquip_SalesOrder</resourceUri>
+    </DataSource>
+    <DataSource id="T171T" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="T171T"/>
+    </DataSource>
+    <DataSource id="T189T" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="T189T"/>
+    </DataSource>
+    <DataSource id="ZCA_CustomerMaster" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.MasterData/calculationviews/ZCA_CustomerMaster</resourceUri>
+    </DataSource>
+    <DataSource id="Join_20$$$$T189T$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="T189T"/>
+    </DataSource>
+    <DataSource id="ZCA_Material" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.MasterData/calculationviews/ZCA_Material</resourceUri>
+    </DataSource>
+    <DataSource id="USR21" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="USR21"/>
+    </DataSource>
+    <DataSource id="ADRP" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="ADRP"/>
+    </DataSource>
+    <DataSource id="TVV1T" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVV1T"/>
+    </DataSource>
+    <DataSource id="TVKOT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVKOT"/>
+    </DataSource>
+    <DataSource id="TVKBT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVKBT"/>
+    </DataSource>
+    <DataSource id="TVGRT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVGRT"/>
+    </DataSource>
+    <DataSource id="TVAKT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVAKT"/>
+    </DataSource>
+    <DataSource id="TVTWT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVTWT"/>
+    </DataSource>
+    <DataSource id="TVAUT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVAUT"/>
+    </DataSource>
+    <DataSource id="TSPAT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TSPAT"/>
+    </DataSource>
+    <DataSource id="Projection_TVAK$$$$TVAK$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TVAK"/>
+    </DataSource>
+    <DataSource id="Join_TJ30T$$$$TJ30T$$" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="TJ30T"/>
+    </DataSource>
+    <DataSource id="ZCA_CompanyCode" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.MasterData/calculationviews/ZCA_CompanyCode</resourceUri>
+    </DataSource>
+    <DataSource id="ZCA_CostCenter" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.MasterData/calculationviews/ZCA_CostCenter</resourceUri>
+    </DataSource>
+    <DataSource id="ZCA_EQUI_COM" type="CALCULATION_VIEW">
+      <viewAttributes allViewAttributes="true"/>
+      <resourceUri>/IMPACT.OTC/calculationviews/ZCA_EQUI_COM</resourceUri>
+    </DataSource>
+    <DataSource id="T176T" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="T176T"/>
+    </DataSource>
+    <DataSource id="M_TIME_DIMENSION" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="_SYS_BI" columnObjectName="M_TIME_DIMENSION"/>
+    </DataSource>
+    <DataSource id="TVKMT" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="SAP_ECC" columnObjectName="TVKMT"/>
+    </DataSource>
+    <DataSource id="NAST" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="NAST"/>
+    </DataSource>
+    <DataSource id="ZOTC_TU_LINK" type="DATA_BASE_TABLE">
+      <viewAttributes allViewAttributes="true"/>
+      <columnObject schemaName="DE1200_HANA_TARGET" columnObjectName="ZOTC_TU_LINK"/>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_VBAP">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="VBELN"/>
+        <viewAttribute id="POSNR"/>
+        <viewAttribute id="ZZACTION_TYPE"/>
+        <viewAttribute id="ZZREASON_CODE"/>
+        <viewAttribute id="ZZREASON_DATE"/>
+        <viewAttribute id="ZZCPI_FLAG"/>
+        <viewAttribute id="ZZFULFIL_FLAG"/>
+        <viewAttribute id="ZZRENEWAL_FLAG"/>
+        <viewAttribute id="ZZSTEP_FLAG"/>
+        <viewAttribute id="ABGRU"/>
+        <viewAttribute id="PSTYV"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="KNUMA_AG"/>
+        <viewAttribute id="VKAUS"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="NETWR"/>
+        <viewAttribute id="KWMENG"/>
+        <viewAttribute id="ZZTRADE_AMT"/>
+        <viewAttribute id="ZZTRADEIN_AMT"/>
+        <viewAttribute id="ZZPURCHASE_PGM"/>
+        <viewAttribute id="WAERK"/>
+        <viewAttribute id="ZZPROMO_CODE1"/>
+        <viewAttribute id="ZZPROMO_CODE2"/>
+        <viewAttribute id="ZZPROMO_CODE3"/>
+        <viewAttribute id="ZZPROMO_CODE4"/>
+        <viewAttribute id="ZZPROMO_CODE5"/>
+        <viewAttribute id="ZZSALE_DEAL"/>
